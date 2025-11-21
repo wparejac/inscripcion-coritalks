@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a CoriTalks: Kinergia</title>
+    <script src="https://cdn-tailwindcss.vercel.app/"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .brand-color {
+            color: #3b82f6; /* Azul Principal */
+        }
+        .btn-brand {
+            background-color: #3b82f6;
+        }
+        .btn-brand:hover {
+            background-color: #2563eb; /* Azul más oscuro para hover */
+        }
+        .form-input-focus:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #93c5fd; /* Azul claro para foco */
+            border-color: #93c5fd;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white flex items-center justify-center min-h-screen">
+
+    <div class="w-full max-w-4xl mx-auto bg-black md:bg-transparent rounded-lg shadow-2xl md:flex">
+        
+        <!-- Columna Izquierda: Información -->
+        <div class="w-full md:w-1/2 p-8 md:p-12 flex flex-col justify-center">
+            <!-- Contenido principal -->
+            <main id="main-content">
+                <div class="text-center md:text-left">
+                    <p class="font-semibold mb-2 text-gray-400">EN EL MARCO DE LA FERIA DE LA SALUD</p>
+                    <h1 class="text-5xl md:text-6xl font-black tracking-tighter">
+                        CORI<span class="brand-color">TALKS</span>
+                    </h1>
+                </div>
+                
+                <div class="my-8 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+                        Kinergia
+                    </h2>
+                    <p class="text-lg text-blue-300 mt-2 font-semibold">Liderar desde el ser, mover desde el propósito</p>
+                    <p class="text-xl font-bold mt-4">Por: Juan Guillermo Brand</p>
+                </div>
+
+                <div class="space-y-4 text-left my-8 text-gray-300">
+                    <p><strong>🗓️ Fecha:</strong> Viernes, 21 de Noviembre</p>
+                    <p><strong>⏰ Hora:</strong> 3:00 PM</p>
+                    <p><strong>📍 Lugar:</strong> Sede Circunvalar, Auditorio 3</p>
+                </div>
+                
+                <p class="text-gray-400 text-sm mb-6 text-justify">
+                    Una experiencia transformadora para descubrir el poder de liderar conectando con tu esencia. Aprende cómo el movimiento interno genera un impacto externo cuando se alinea con un propósito auténtico.
+                </p>
+
+                <div class="mt-10 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <button id="register-button" class="w-full sm:w-auto btn-brand text-white font-bold text-lg py-4 px-8 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105">
+                        Reserva tu lugar
+                    </button>
+                    <a href="https://youtube.com/live/xw2fa1Vy40I?feature=share" target="_blank" id="youtube-link" class="w-full sm:w-auto bg-gray-700 hover:bg-gray-600 text-white font-bold text-lg py-4 px-8 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 inline-flex items-center justify-center">
+                        <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+                        Ver en YouTube
+                    </a>
+                </div>
+            </main>
+
+            <!-- Formulario de Registro (Oculto) -->
+            <div id="form-container" class="hidden">
+                <h3 class="text-3xl font-bold text-white mb-8 text-center md:text-left">Registro al Evento</h3>
+                <form id="registration-form" class="text-left">
+                    <div class="mb-4">
+                        <label for="documento" class="block text-sm font-medium text-gray-300 mb-1">Documento</label>
+                        <input type="text" id="documento" name="documento" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 form-input-focus">
+                    </div>
+                    <div class="mb-4">
+                        <label for="nombre" class="block text-sm font-medium text-gray-300 mb-1">Nombre Completo</label>
+                        <input type="text" id="nombre" name="nombre" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 form-input-focus">
+                    </div>
+                    <div class="mb-4">
+                        <label for="correo" class="block text-sm font-medium text-gray-300 mb-1">Correo Electrónico</label>
+                        <input type="email" id="correo" name="correo" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 form-input-focus">
+                    </div>
+                    <div class="mb-6">
+                        <label for="proceso" class="block text-sm font-medium text-gray-300 mb-1">Proceso que representa</label>
+                        <input type="text" id="proceso" name="proceso" required class="w-full p-3 rounded-lg bg-gray-800 border border-gray-700 form-input-focus">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <button type="submit" id="submit-button" class="w-full md:w-auto btn-brand text-white font-bold text-lg py-3 px-10 rounded-lg transition-transform duration-300 ease-in-out hover:scale-105 disabled:opacity-50">
+                            Confirmar Asistencia
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contenedor de Mensajes -->
+            <div id="messages-container" class="hidden text-center fade-in">
+                 <div id="success-message" class="hidden">
+                    <h3 class="text-4xl font-bold text-green-400">¡Registro Completado!</h3>
+                    <p class="mt-4 text-lg text-gray-300">Tu lugar ha sido reservado. Hemos enviado un correo de confirmación a tu email.</p>
+                </div>
+                <div id="duplicate-message" class="hidden">
+                    <h3 class="text-4xl font-bold text-yellow-400">Ya estás inscrito</h3>
+                    <p class="mt-4 text-lg text-gray-300">Detectamos que ya te habías registrado para este evento. ¡No es necesario que lo hagas de nuevo!</p>
+                </div>
+                <div id="error-message" class="hidden">
+                    <h3 class="text-4xl font-bold text-red-400">Ocurrió un error</h3>
+                    <p class="mt-4 text-lg text-gray-300">No pudimos procesar tu registro. Por favor, inténtalo de nuevo más tarde.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna Derecha: Imagen -->
+        <div class="hidden md:block md:w-1/2">
+            <img src="https://i.imgur.com/rbmw0Mf.png" alt="Juan Guillermo Brand" class="w-full h-full object-cover rounded-r-lg">
+        </div>
+    </div>
+    
+    <!-- Custom Alert Modal for YouTube Link -->
+    <div id="youtube-alert-modal" class="hidden fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50">
+        <div class="bg-gray-900 border border-gray-700 rounded-lg shadow-xl p-8 max-w-sm mx-auto text-center fade-in">
+            <h3 class="text-2xl font-bold text-white mb-4">¡Un Momento!</h3>
+            <p class="text-gray-300 mb-6">La transmisión en vivo aún no ha comenzado.</p>
+            <button id="close-modal-button" class="w-full btn-brand text-white font-bold py-2 px-6 rounded-lg">
+                Entendido
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzEZQNsgh8-0d8UUlRFQL2EDZudUi1inPz6kv3JOokjacyMNT-OAvl5H1Up2Jnh4QYMGw/exec";
+        // Fecha actualizada: 21 de Noviembre de 2025, 3:00 PM
+        const eventDate = new Date('2025-11-21T15:00:00-05:00'); 
+
+        const mainContent = document.getElementById('main-content');
+        const formContainer = document.getElementById('form-container');
+        const registerButton = document.getElementById('register-button');
+        const registrationForm = document.getElementById('registration-form');
+        const messagesContainer = document.getElementById('messages-container');
+        const successMessage = document.getElementById('success-message');
+        const duplicateMessage = document.getElementById('duplicate-message');
+        const errorMessage = document.getElementById('error-message');
+        const submitButton = document.getElementById('submit-button');
+        const youtubeLink = document.getElementById('youtube-link');
+        const youtubeAlertModal = document.getElementById('youtube-alert-modal');
+        const closeModalButton = document.getElementById('close-modal-button');
+        
+        registerButton.addEventListener('click', () => {
+            mainContent.classList.add('hidden');
+            formContainer.classList.remove('hidden');
+            formContainer.classList.add('fade-in');
+        });
+
+        registrationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            submitButton.disabled = true;
+            submitButton.textContent = 'Enviando...';
+
+            fetch(SCRIPT_URL, { 
+                method: 'POST', 
+                body: new FormData(registrationForm)
+            })
+            .then(response => response.text())
+            .then(data => {
+                formContainer.classList.add('hidden');
+                messagesContainer.classList.remove('hidden');
+                
+                successMessage.classList.add('hidden');
+                duplicateMessage.classList.add('hidden');
+                errorMessage.classList.add('hidden');
+
+                if (data.trim() === 'SUCCESS') {
+                    successMessage.classList.remove('hidden');
+                } else if (data.trim() === 'DUPLICATE') {
+                    duplicateMessage.classList.remove('hidden');
+                } else {
+                    errorMessage.classList.remove('hidden');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                formContainer.classList.add('hidden');
+                messagesContainer.classList.remove('hidden');
+                errorMessage.classList.remove('hidden');
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Confirmar Asistencia';
+            });
+        });
+
+        youtubeLink.addEventListener('click', (event) => {
+            const now = new Date();
+            if (now < eventDate) {
+                event.preventDefault(); 
+                youtubeAlertModal.classList.remove('hidden');
+            }
+        });
+
+        closeModalButton.addEventListener('click', () => {
+            youtubeAlertModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
